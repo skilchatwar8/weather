@@ -22,7 +22,7 @@ const getWeather = async (city) => {
             document.getElementById("temp").innerHTML = `${data.main.temp} °C`;
             document.getElementById("descript").innerHTML = `${data.weather[0].description}`;
             document.getElementById("weatherIcon").src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
-            document.getElementById("humidity").innerHTML = `${data.main.humidity}`;
+            document.getElementById("humidity").innerHTML = `${data.main.humidity} %`;
             document.getElementById("wind").innerHTML = `${data.wind.speed} km/h`;
         }
         else {
