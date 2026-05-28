@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather App</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Weather</h1>
+        <div class="date_time">
+            <p id="date" order="2"></p>
+            <p id="time" order="1"></p>
+        </div>
+        <div class="searchbox">
+            <input type="text" id="cityInput" placeholder="Enter your city name..." />
+            <button class="searchBtn" id="searchBtn"><img id="searchIcon" src="./assets/magnifying-glass.png" width="20"
+                    height="20"></button>
+        </div>
+        <div id="error" class="error"></div>
+        <div class="weatherCard">
+            <img id="weatherIcon" src="./assets/weather.png" width="50" height="50" alt="Weather Icon" />
+            <p id="temp">30°C</p>
+            <h2 id="cityName">Pune, India</h2>
+            <p id="descript">Sunny, Clear sky</p>
+            <hr />
+            <div class="box">
+                <div class="humidity">
+                    <div class="title">
+                        <img src="./assets/humidity.png" width="15" height="15" alt="Humidity Icon" />
+                        <h3>Humidity</h3>
+                    </div>
+                    <p id="humidity">55%</p>
+                </div>
+                <hr />
+                <div class="wind">
+                    <div class="title">
+                        <img src="./assets/wind.png" width="15" height="15" alt="Wind Icon" />
+                        <h3>wind</h3>
+                    </div>
+                    <p id="wind">15 km/h</p>
+                </div>
+                <hr />
+                <div class="maxTemp">
+                    <div class="title">
+                        <img src="./assets/hightemp.png" width="15" height="15" alt="maxTemp Icon" />
+                        <h3>Feels like</h3>
+                    </div>
+                    <p id="feelsLike">32°C</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

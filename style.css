@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f0f0; /* overridden by JS on load */
+  color: #333;
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+  min-height: 100vh;
+  transition: background 1.2s ease; /* smooth time-of-day shifts */
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  padding: 24px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: border-color 1.2s ease;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.searchbox {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.searchbox input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+.searchbox input:focus {
+  border-color: #007bff;
+}
+
+.searchbox button {
+  padding: 10px 16px;
+  font-size: 16px;
+  color: white;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: hwb(0 97% 2%);
+}
+
+/* Weather card — background set dynamically by JS */
+.weatherCard {
+  background-color: white;
+  padding: 32px 24px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition:
+    background 0.8s ease,
+    box-shadow 0.8s ease; /* smooth weather change */
+}
+
+hr {
+  margin: 16px 0;
+  border: none;
+  border-top: 1px solid #eee;
+  transition: border-top-color 0.8s ease;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box h3 {
+  font-size: 15px;
+  font-weight: normal;
+  color: #333;
+  transition: color 0.8s ease;
+}
+
+.box hr {
+  width: 1px;
+  height: 40px;
+  background-color: #eee;
+  transition: background-color 0.8s ease;
+}
+
+.box .title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.box p {
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  transition: color 0.8s ease;
+}
+
+#cityName {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #333;
+  transition: color 0.8s ease;
+}
+
+#temp {
+  font-size: 54px;
+  font-weight: bold;
+  color: #4a90d9;
+  margin-bottom: 8px;
+  transition: color 0.8s ease;
+}
+
+#descript {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 16px;
+  text-transform: capitalize;
+  transition: color 0.8s ease;
+}
+
+#humidity,
+#wind,
+#feelsLike {
+  font-size: 16px;
+  color: #000;
+  margin-top: 4px;
+  transition: color 0.8s ease;
+}
+
+.date_time {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+}
+
+.date_time p {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  transition: color 1.2s ease; /* syncs with body bg transition */
+}
+
+.weather-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
